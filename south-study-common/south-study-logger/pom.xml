@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <!-- 南书房学习研究工作室 -->
+    <groupId>com.south.study</groupId>
+    <artifactId>south-study-logger</artifactId>
+    <name>south-study-logger</name>
+    <description>南书房学习研究工作室</description>
+    <packaging>jar</packaging>
+    <!-- 开发者信息 -->
+    <developers>
+        <developer>
+            <name>YueJJun</name>
+            <email>1530620364@qq.com</email>
+            <roles>
+                <role>Designer</role>
+                <role>Developer</role>
+                <role>Architect</role>
+            </roles>
+            <organization>南书房学习研究工作室-个人开发者</organization>
+        </developer>
+    </developers>
+    <!-- 父版本控制 -->
+    <parent>
+        <groupId>com.south.study</groupId>
+        <artifactId>south-study-common</artifactId>
+        <version>0.0.1</version>
+        <relativePath/>
+    </parent>
+    <!-- 版本与变量控制 -->
+    <properties>
+        <logback.version>1.2.3</logback.version>
+        <slf4j.version>1.7.30</slf4j.version>
+    </properties>
+    <!-- 依赖 -->
+    <dependencies>
+        <!-- https://mvnrepository.com/artifact/ch.qos.logback/logback-classic -->
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>${logback.version}</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-api -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>${slf4j.version}</version>
+        </dependency>
+    </dependencies>
+</project>

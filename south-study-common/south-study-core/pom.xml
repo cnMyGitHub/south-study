@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <!-- 南书房学习研究工作室 -->
+    <groupId>com.south.study</groupId>
+    <artifactId>south-study-core</artifactId>
+    <name>south-study-core</name>
+    <description>南书房学习研究工作室</description>
+    <packaging>jar</packaging>
+    <!-- 开发者信息 -->
+    <developers>
+        <developer>
+            <name>YueJJun</name>
+            <email>1530620364@qq.com</email>
+            <roles>
+                <role>Designer</role>
+                <role>Developer</role>
+                <role>Architect</role>
+            </roles>
+            <organization>南书房学习研究工作室-个人开发者</organization>
+        </developer>
+    </developers>
+    <!-- 父版本控制 -->
+    <parent>
+        <groupId>com.south.study</groupId>
+        <artifactId>south-study-common</artifactId>
+        <version>0.0.1</version>
+        <relativePath/>
+    </parent>
+    <!-- 版本与变量控制 -->
+    <properties>
+        <swagger.core>1.5.22</swagger.core>
+    </properties>
+    <!-- 依赖 -->
+    <dependencies>
+
+        <dependency>
+            <!-- 解决 ch.qos.logback 不存在 -->
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <dependency>
+            <!-- Hutool 常用工具包 -->
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-all</artifactId>
+        </dependency>
+        <dependency>
+            <!-- Lang3 工具包 -->
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+        </dependency>
+        <!-- Guava 工具 -->
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+        </dependency>
+
+        <dependency>
+            <!-- Lombok 表达式 -->
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <scope>provided</scope>
+            <!--<optional>true</optional>-->
+        </dependency>
+        <dependency>
+            <!-- Swagger 注解 -->
+            <groupId>io.swagger</groupId>
+            <artifactId>swagger-annotations</artifactId>
+            <version>${swagger.core}</version>
+            <scope>compile</scope>
+        </dependency>
+
+        <dependency>
+            <!-- JSON 处理 -->
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+        </dependency>
+        <dependency>
+            <!-- ObjectMapper 序列化与反序列化 -->
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-annotations</artifactId>
+        </dependency>
+
+        <!-- poi -->
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-ooxml</artifactId>
+            <version>4.0.1</version>
+        </dependency>
+
+        <!-- RSA BouncyCastleProvider 对象 -->
+        <dependency>
+            <groupId>org.bouncycastle</groupId>
+            <artifactId>bcprov-jdk15on</artifactId>
+            <version>1.60</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-web</artifactId>
+            <version>5.2.12.RELEASE</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+            <version>5.2.12.RELEASE</version>
+            <scope>compile</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>attach-sources</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+</project>

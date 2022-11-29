@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <!-- 南书房学习研究工作室 -->
+    <groupId>com.south.study</groupId>
+    <artifactId>south-study</artifactId>
+    <version>0.0.1</version>
+    <name>south-study</name>
+    <description>南书房学习研究工作室</description>
+    <packaging>pom</packaging>
+    <!-- 模块控制 -->
+    <modules>
+        <module>south-study-common</module>
+        <module>south-study-platform</module>
+    </modules>
+    <!-- 开发者信息 -->
+    <developers>
+        <developer>
+            <name>YueJJun</name>
+            <email>1530620364@qq.com</email>
+            <roles>
+                <role>Designer</role>
+                <role>Developer</role>
+                <role>Architect</role>
+            </roles>
+            <organization>南书房学习研究工作室-个人开发者</organization>
+        </developer>
+    </developers>
+</project>

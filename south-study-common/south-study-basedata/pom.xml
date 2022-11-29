@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <!-- 南书房学习研究工作室 -->
+    <artifactId>south-study-basedata</artifactId>
+    <name>south-study-basedata</name>
+    <description>南书房学习研究工作室</description>
+    <packaging>jar</packaging>
+    <!-- 开发者信息 -->
+    <developers>
+        <developer>
+            <name>YueJJun</name>
+            <email>1530620364@qq.com</email>
+            <roles>
+                <role>Designer</role>
+                <role>Developer</role>
+                <role>Architect</role>
+            </roles>
+            <organization>南书房学习研究工作室-个人开发者</organization>
+        </developer>
+    </developers>
+    <!-- 父版本控制 -->
+    <parent>
+        <groupId>com.south.study</groupId>
+        <artifactId>south-study-common</artifactId>
+        <version>0.0.1</version>
+        <relativePath/>
+    </parent>
+    <!-- 版本与变量控制 -->
+    <properties>
+    </properties>
+    <!-- 依赖 -->
+    <dependencies>
+    </dependencies>
+</project>
