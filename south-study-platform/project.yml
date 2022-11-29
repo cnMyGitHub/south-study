@@ -1,0 +1,32 @@
+
+  covert: 转换
+  engine: 引擎
+  dispatch: 调度
+
+module:
+  client: 客户端
+  common: 实体与单体通用工具类
+  provider: 提供者
+  consumer: 消费者
+package:
+  gateway: 网关
+  common: 公共
+  annotations: 注解
+
+class:
+  _const: 常量
+  _exception: 异常
+  _helper: 辅助（针对性强）
+  _utils: 工具
+  i_: 接口
+  _convert: 转换
+  _service: 注入类接口
+  _service-impl: 注入类接口实现
+  _provider: 提供
+  _config: 配置
+  _properties: 属性
+model:
+  vo: 前端展示
+  bo: 请求数据
+  dto: 内部交换数据
+  entity: 数据库交换数据

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>south-study-account</artifactId>
+    <name>south-study-account</name>
+    <packaging>pom</packaging>
+    <description>南书房学习研究工作室-账户</description>
+    <!-- 模块控制 -->
+    <modules>
+        <module>south-study-account-client</module>
+        <module>south-study-account-common</module>
+        <module>south-study-account-consumer</module>
+        <module>south-study-account-provider</module>
+    </modules>
+    <!-- 开发者信息 -->
+    <developers>
+        <developer>
+            <name>YueJJun</name>
+            <email>1530620364@qq.com</email>
+            <roles>
+                <role>Designer</role>
+                <role>Developer</role>
+                <role>Architect</role>
+            </roles>
+            <organization>南书房学习研究工作室-个人开发者</organization>
+        </developer>
+    </developers>
+    <!-- 父版本控制 -->
+    <parent>
+        <groupId>com.south.study</groupId>
+        <artifactId>south-study-platform</artifactId>
+        <version>0.0.1</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+    <!-- 版本与变量控制 -->
+    <properties>
+    </properties>
+    <!-- 依赖管理 -->
+    <dependencyManagement>
+        <dependencies>
+            <!-- 项目（套） -->
+            <dependency>
+                <groupId>com.south.study</groupId>
+                <artifactId>south-study-account-client</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.south.study</groupId>
+                <artifactId>south-study-account-common</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.south.study</groupId>
+                <artifactId>south-study-account-consumer</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.south.study</groupId>
+                <artifactId>south-study-account-provider</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+</project>

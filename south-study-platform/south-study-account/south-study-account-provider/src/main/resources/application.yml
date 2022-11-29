@@ -1,0 +1,150 @@
+server:
+  port: 8600
+spring:
+  application:
+    name: study-study-gateway
+  metrics:
+    prometheus:
+      enabled: true
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+    gateway:
+      globalcors:
+        cors-configurations:
+          '[/**]':
+            allowed-origins: "*"
+            allowed-methods:
+              - GET
+              - POST
+              - DELETE
+              - PUT
+            allowed-headers: "*"
+      routes:
+        #主页服务
+        - id: ideological-political-home
+          uri: lb://ideological-political-home
+          predicates:
+            - Path=/ideo-home/**
+          filters:
+            - StripPrefix=1
+            - name: Hystrix
+              args:
+                name: default
+                fallbackUri: forward:/fallback
+        #用户服务
+        - id: ideological-political-user
+          uri: lb://ideological-political-user
+          predicates:
+            - Path=/ideo-user/**
+          filters:
+            - StripPrefix=1
+            - name: Hystrix
+              args:
+                name: resource
+                fallbackUri: forward:/fallback
+        #文化服务
+        - id: ideological-political-culture
+          uri: lb://ideological-political-culture
+          predicates:
+            - Path=/ideo-culture/**
+          filters:
+            - StripPrefix=1
+            - name: Hystrix
+              args:
+                name: resource
+                fallbackUri: forward:/fallback
+        #资源服务
+        - id: ideological-political-resource
+          uri: lb://ideological-political-resource
+          predicates:
+            - Path=/ideo-resource/**
+          filters:
+            - StripPrefix=1
+            - name: Hystrix
+              args:
+                name: resource
+                fallbackUri: forward:/fallback
+        #评论服务
+        - id: ideological-political-comment
+          uri: lb://ideological-political-comment
+          predicates:
+            - Path=/ideo-comment/**
+          filters:
+            - StripPrefix=1
+            - name: Hystrix
+              args:
+                name: resource
+                fallbackUri: forward:/fallback
+        #思政中职课程服务
+        - id: ideological-political-subject
+          uri: lb://ideological-political-subject
+          predicates:
+            - Path=/ideo-subject/**
+          filters:
+            - StripPrefix=1
+            - name: Hystrix
+              args:
+                name: resource
+                fallbackUri: forward:/fallback
+        #思政高职课程服务
+        - id: ideological-political-subject-gz
+          uri: lb://ideological-political-subject-gz
+          predicates:
+            - Path=/ideo-subject-gz/**
+          filters:
+            - StripPrefix=1
+            - name: Hystrix
+              args:
+                name: resource
+                fallbackUri: forward:/fallback
+         #空间服务
+        - id: ideological-political-space
+          uri: lb://ideological-political-space
+          predicates:
+            - Path=/ideo-space/**
+          filters:
+            - StripPrefix=1
+            - name: Hystrix
+              args:
+                name: resource
+                fallbackUri: forward:/fallback
+    inetutils:
+      preferredNetworks[0]: 192.168.*.*
+
+  redis:
+    host: 127.0.0.1
+    password:
+    database: 0
+    port: 6379
+    lettuce:
+      pool:
+        max-idle: 2
+        max-active: 20
+        min-idle: 2
+    timeout: 3000
+
+hystrix:
+  command:
+    resource:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 120000
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 5000
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  metrics:
+    tags:
+      application: ${spring.application.name}
+
